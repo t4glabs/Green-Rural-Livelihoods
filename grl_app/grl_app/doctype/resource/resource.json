@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:title",
+ "creation": "2024-01-09 08:12:37.809996",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "type",
+  "category",
+  "knowledge_type",
+  "section_break_xiul",
+  "state",
+  "district",
+  "section_break_uz0c",
+  "title",
+  "description",
+  "language",
+  "organization",
+  "event_link",
+  "address",
+  "start_date",
+  "end_date",
+  "published_date",
+  "tags",
+  "section_break_iro3",
+  "added_by",
+  "verified_by",
+  "amended_from",
+  "column_break_gibc",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Resource Type"
+  },
+  {
+   "fieldname": "section_break_xiul",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Resource",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description"
+  },
+  {
+   "default": "Hindi",
+   "depends_on": "eval:doc.type == 'Knowledge'",
+   "fieldname": "language",
+   "fieldtype": "Link",
+   "label": "Language",
+   "options": "Resource Language"
+  },
+  {
+   "fieldname": "organization",
+   "fieldtype": "Link",
+   "label": "Organization",
+   "options": "Organization"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Event'",
+   "fieldname": "event_link",
+   "fieldtype": "Data",
+   "label": "Event Link"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Event'",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Event'",
+   "fieldname": "start_date",
+   "fieldtype": "Data",
+   "label": "Start Date"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Event'",
+   "fieldname": "end_date",
+   "fieldtype": "Data",
+   "label": "End Date"
+  },
+  {
+   "default": "Today",
+   "fieldname": "published_date",
+   "fieldtype": "Data",
+   "label": "Published Date"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Table",
+   "label": "Tags",
+   "options": "Resource Tag Table"
+  },
+  {
+   "fieldname": "added_by",
+   "fieldtype": "Data",
+   "label": "Added By"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nAccepted\nRejected"
+  },
+  {
+   "fieldname": "verified_by",
+   "fieldtype": "Data",
+   "label": "Verified By"
+  },
+  {
+   "fieldname": "section_break_uz0c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_iro3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_gibc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Knowledge'",
+   "fieldname": "knowledge_type",
+   "fieldtype": "Link",
+   "label": "Knowledge Type",
+   "options": "Knowledge Subtype"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Resource Category"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-09 17:45:39.266615",
+ "modified_by": "Administrator",
+ "module": "Grl App",
+ "name": "Resource",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

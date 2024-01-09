@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:organization_name",
+ "creation": "2024-01-09 12:38:06.029732",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_td3n",
+  "organization_name",
+  "organization_member_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_td3n",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "organization_name",
+   "fieldtype": "Data",
+   "label": "Organization Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "organization_member_table",
+   "fieldtype": "Table",
+   "label": "Organization Members",
+   "options": "Organization Member Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-09 12:48:33.126305",
+ "modified_by": "Administrator",
+ "module": "Grl App",
+ "name": "Organization",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
