@@ -15,6 +15,7 @@
   "section_break_uz0c",
   "title",
   "description",
+  "resource_content",
   "language",
   "organization",
   "event_link",
@@ -28,12 +29,14 @@
   "verified_by",
   "amended_from",
   "column_break_gibc",
-  "status"
+  "statuss"
  ],
  "fields": [
   {
    "fieldname": "type",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Type",
    "options": "Resource Type"
   },
@@ -64,14 +67,13 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Title",
    "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "description",
-   "fieldtype": "Data",
+   "fieldtype": "Text",
    "label": "Description"
   },
   {
@@ -103,19 +105,19 @@
   {
    "depends_on": "eval:doc.type == 'Event'",
    "fieldname": "start_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Start Date"
   },
   {
    "depends_on": "eval:doc.type == 'Event'",
    "fieldname": "end_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "End Date"
   },
   {
    "default": "Today",
    "fieldname": "published_date",
-   "fieldtype": "Data",
+   "fieldtype": "Date",
    "label": "Published Date"
   },
   {
@@ -128,12 +130,6 @@
    "fieldname": "added_by",
    "fieldtype": "Data",
    "label": "Added By"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "Open\nAccepted\nRejected"
   },
   {
    "fieldname": "verified_by",
@@ -160,16 +156,32 @@
    "options": "Knowledge Subtype"
   },
   {
+   "depends_on": "eval:doc.type == 'Knowledge'",
    "fieldname": "category",
    "fieldtype": "Link",
    "label": "Category",
    "options": "Resource Category"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Knowledge'",
+   "fieldname": "resource_content",
+   "fieldtype": "Data",
+   "label": "Resource Content"
+  },
+  {
+   "fieldname": "statuss",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nAccepted\nRejected"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-01-09 17:45:39.266615",
+ "modified": "2024-01-11 08:23:37.842354",
  "modified_by": "Administrator",
  "module": "Grl App",
  "name": "Resource",

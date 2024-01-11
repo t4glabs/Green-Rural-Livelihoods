@@ -23,8 +23,14 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-01-09 17:54:13.575055",
+ "links": [
+  {
+   "link_doctype": "Resource",
+   "link_fieldname": "resource_tags",
+   "table_fieldname": "tags"
+  }
+ ],
+ "modified": "2024-01-10 10:52:48.109732",
  "modified_by": "Administrator",
  "module": "Grl App",
  "name": "Resource Tag",
