@@ -30,7 +30,7 @@
    "table_fieldname": "tags"
   }
  ],
- "modified": "2024-01-10 10:52:48.109732",
+ "modified": "2024-01-12 12:57:19.842322",
  "modified_by": "Administrator",
  "module": "Grl App",
  "name": "Resource Tag",
@@ -39,13 +39,26 @@
  "permissions": [
   {
    "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Content Provider",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "System Manager",
+   "role": "Content Approver",
+   "select": 1,
    "share": 1,
    "write": 1
   }
